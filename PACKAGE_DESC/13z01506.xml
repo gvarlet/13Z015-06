@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Klaus Popp (MEN Mikro Elektronik GmbH) -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="packagedesc.xsd">
+	<name>13z01506</name>
+	<description>MDIS5 driver package for MSCAN</description>
+	<date>2013-11-27</date>
+	<revision>2.20</revision>
+	<docroot>LIBSRC/MSCAN_API/DOC/html/index.html</docroot>
+	<!-- Models -->
+	<modellist>
+		<model>
+			<!-- MEN Boromir FPGA EM04/EM05 -->
+			<hwname>16Z029_CAN</hwname>
+			<description>CAN Layer 2 for MSCAN controller in Chameleon FPGA</description>
+			<devnameprefix>CAN</devnameprefix>
+			<devtype>MDIS</devtype>
+			<autoid>
+				<chamunitid>0x08</chamunitid>
+				<chamv2id>29</chamv2id>
+			</autoid>
+			<bbslot>
+				<bbismodel>CHAMELEON</bbismodel>
+			</bbslot>
+			<bbslot>
+				<bbismodel>CHAMELEON_PCITBL</bbismodel>
+			</bbslot>
+			<settinglist>
+				<setting>
+					<name>CANCLOCK</name>
+					<description>CAN controller input clock in Hz</description>
+					<type>U_INT32</type>
+					<value>32000000</value>
+					<defaultvalue>0</defaultvalue>
+				</setting>
+				<setting>
+					<name>MIN_BRP</name>
+					<description>Minimum baud rate prescaler value. 2 for most cores, 1 in rare cases.</description>
+					<type>U_INT32</type>
+					<value>2</value>
+					<defaultvalue>2</defaultvalue>
+				</setting>
+			</settinglist>
+			<swmodulelist>
+				<swmodule swap="false">
+					<name>boromir</name>
+					<description>Driver for MEN MSCAN FPGA implementation</description>
+					<type>Low Level Driver</type>
+					<makefilepath>MSCAN/DRIVER/COM/driver_boromir.mak</makefilepath>
+				</swmodule>
+			</swmodulelist>
+		</model>
+		<model>
+			<!-- standard model -->
+			<hwname>16Z029_CAN</hwname>
+			<modelname>16Z029_CAN_IO</modelname>
+			<description>CAN Layer 2 for MSCAN controller in Chameleon FPGA (io mapped)</description>
+			<devnameprefix>CAN</devnameprefix>
+			<devtype>MDIS</devtype>
+			<autoid>
+				<chamunitid>0x08</chamunitid>
+				<chamv2id>29</chamv2id>
+			</autoid>
+			<bbslot>
+				<bbismodel>CHAMELEON</bbismodel>
+			</bbslot>
+			<bbslot>
+				<bbismodel>CHAMELEON_PCITBL</bbismodel>
+			</bbslot>
+			<settinglist>
+				<setting>
+					<name>CANCLOCK</name>
+					<description>CAN controller input clock in Hz</description>
+					<type>U_INT32</type>
+					<value>32000000</value>
+					<defaultvalue>0</defaultvalue>
+				</setting>
+				<setting>
+					<name>MIN_BRP</name>
+					<description>Minimum baud rate prescaler value. 2 for most cores, 1 in rare cases.</description>
+					<type>U_INT32</type>
+					<value>2</value>
+					<defaultvalue>2</defaultvalue>
+				</setting>
+			</settinglist>
+			<swmodulelist>
+				<swmodule swap="false">
+					<name>boromir_io</name>
+					<description>Driver for MEN MSCAN FPGA implementation</description>
+					<type>Low Level Driver</type>
+					<makefilepath>MSCAN/DRIVER/COM/driver_boromir_io.mak</makefilepath>
+				</swmodule>
+			</swmodulelist>
+		</model>
+		<model>
+			<!-- CAN inside MPC5200 -->
+			<hwname>MSCAN_5200</hwname>
+			<description>MSCAN controller in MPC5200</description>
+			<devnameprefix>CAN</devnameprefix>
+			<devtype>MDIS</devtype>
+			<bbslot>
+				<bbisinstance>BBMSCAN_1</bbisinstance>
+				<slot>0</slot>
+			</bbslot>
+			<bbslot>
+				<bbisinstance>BBMSCAN_2</bbisinstance>
+				<slot>0</slot>
+			</bbslot>
+			<settinglist>
+				<setting>
+					<name>CANCLOCK</name>
+					<description>CAN controller input clock in Hz</description>
+					<type>U_INT32</type>
+					<value>64000000</value>
+					<defaultvalue>0</defaultvalue>
+				</setting>
+				<setting>
+					<name>MIN_BRP</name>
+					<description>Minimum baud rate prescaler value. 2 for most cores, 1 in rare cases.</description>
+					<type>U_INT32</type>
+					<value>2</value>
+					<defaultvalue>2</defaultvalue>
+				</setting>
+			</settinglist>
+			<swmodulelist>
+				<swmodule swap="false">
+					<name>canodin</name>
+					<description>Driver for MPC5x00 MSCAN implementation</description>
+					<type>Low Level Driver</type>
+					<makefilepath>MSCAN/DRIVER/COM/driver_odin.mak</makefilepath>
+				</swmodule>
+			</swmodulelist>
+		</model>
+	</modellist>
+	<!-- Global software modules -->
+	<swmodulelist>
+		<swmodule>
+			<name>mscan_api</name>
+			<description>Application interface for MSCAN driver</description>
+			<type>User Library</type>
+			<makefilepath>MSCAN_API/COM/library.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>mscan_alyzer</name>
+			<description>Test tool for MSCAN driver against CANalyzer</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>MSCAN/TOOLS/MSCAN_ALYZER/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>mscan_loopb</name>
+			<description>Test tool for MSCAN driver in loopback mode</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>MSCAN/TOOLS/MSCAN_LOOPB/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule>
+			<name>mscan_menu</name>
+			<description>Menu driven test tool for MSCAN driver</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>MSCAN/TOOLS/MSCAN_MENU/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule internal="true">
+			<name>mscan_qstest</name>
+			<description>Test tool for two MSCAN controllers</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>MSCAN/TOOLS/MSCAN_QSTEST/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule internal="true">
+			<name>mscan_pingpong</name>
+			<description>Test tool for two MSCAN controllers</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>MSCAN/TOOLS/MSCAN_PINGPONG/COM/program.mak</makefilepath>
+		</swmodule>
+		<swmodule internal="true">
+			<name>mscan_client_srv</name>
+			<description>Test tool for two MSCAN controllers</description>
+			<type>Driver Specific Tool</type>
+			<makefilepath>MSCAN/TOOLS/MSCAN_CLIENT_SRV/COM/program.mak</makefilepath>
+		</swmodule>
+	</swmodulelist>
+</package>
