@@ -1975,7 +1975,6 @@ static int WaitRxFifoEntry(
 {
 	MSG_OBJ *obj = &h->msgObj[nr];
 	int32 error = 0;
-	OSS_IRQ_STATE oldState;
 
 	if( nr >= MSCAN_NUM_OBJS )
 		return MSCAN_ERR_BADMSGNUM;
