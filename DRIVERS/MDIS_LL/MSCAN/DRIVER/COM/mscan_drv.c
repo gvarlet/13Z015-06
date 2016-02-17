@@ -2422,5 +2422,3 @@ static void DumpFrame( MSCAN_HANDLE *h, char *msg, const MSCAN_FRAME *frm )
 	DBGWRT_2((DBH, "%s\n", buf ));
 #endif /* DBG */
 }
-
-
