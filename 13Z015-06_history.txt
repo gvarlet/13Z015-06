@@ -262,7 +262,7 @@ mscan_drv.c: Compile GetTimeBase only for Ultra-C
 Driver fixes (mscan_drv.c 1.4):
    1) WaitRxFifoEntry/MscanWriteMsg: fixed problem when timeout and
    rx msg/fifo available conditions arrived at the same time.
-   2) Allow to read error counters in online mode if MSCAN_IS_BOROMIR
+   2) Allow to read error counters in online mode if MSCAN_IS_Z15
    3) added forgotten baudrate 100kBit/s
 - Added doxygen documentation files
 - Tools slightly changed: mscan_alyzer, mscan_menu

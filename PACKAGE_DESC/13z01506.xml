@@ -9,7 +9,7 @@
 	<!-- Models -->
 	<modellist>
 		<model>
-			<!-- MEN Boromir FPGA EM04/EM05 -->
+			<!-- MEN Z15 FPGA EM04/EM05 -->
 			<hwname>16Z029_CAN</hwname>
 			<description>CAN Layer 2 for MSCAN controller in Chameleon FPGA</description>
 			<devnameprefix>CAN</devnameprefix>
@@ -42,10 +42,10 @@
 			</settinglist>
 			<swmodulelist>
 				<swmodule swap="false">
-					<name>boromir</name>
+					<name>z15</name>
 					<description>Driver for MEN MSCAN FPGA implementation</description>
 					<type>Low Level Driver</type>
-					<makefilepath>MSCAN/DRIVER/COM/driver_boromir.mak</makefilepath>
+					<makefilepath>MSCAN/DRIVER/COM/driver_z15.mak</makefilepath>
 				</swmodule>
 			</swmodulelist>
 		</model>
@@ -84,10 +84,10 @@
 			</settinglist>
 			<swmodulelist>
 				<swmodule swap="false">
-					<name>boromir_io</name>
+					<name>z15_io</name>
 					<description>Driver for MEN MSCAN FPGA implementation</description>
 					<type>Low Level Driver</type>
-					<makefilepath>MSCAN/DRIVER/COM/driver_boromir_io.mak</makefilepath>
+					<makefilepath>MSCAN/DRIVER/COM/driver_z15_io.mak</makefilepath>
 				</swmodule>
 			</swmodulelist>
 		</model>

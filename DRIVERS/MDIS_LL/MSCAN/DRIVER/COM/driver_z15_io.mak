@@ -1,30 +1,31 @@
 #***************************  M a k e f i l e  *******************************
 #
-#         Author: kp
-#          $Date: 2004/06/14 11:58:11 $
-#      $Revision: 1.2 $
+#         Author: michael.roth@men.de
+#          $Date: 2013/11/27 15:35:15 $
+#      $Revision: 1.1 $
 #
-#    Description: Makefile definitions for the MSCAN (BOROMIR) driver
-#                 
+#    Description: Makefile definitions for the MSCAN (BOROMIR) driver for 
+#                 IO mapped (x86) FPGAs
 #
 #---------------------------------[ History ]---------------------------------
 #
-#   $Log: driver_boromir.mak,v $
-#   Revision 1.2  2004/06/14 11:58:11  kp
-#   cosmetics
+#   ts 17.02.2016   changed naming to z15 as with UART Z25 driver
 #
-#   Revision 1.1  2003/02/07 13:16:35  kp
+#   ----- end of cvs maintenance ------
+#   $Log: driver_boromir_io.mak,v $
+#   Revision 1.1  2013/11/27 15:35:15  MRoth
 #   Initial Revision
 #
+#
 #-----------------------------------------------------------------------------
-#   (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany
+#   (c) Copyright 2011 by MEN Mikro Elektronik GmbH, Nuremberg, Germany
 #*****************************************************************************
 
-MAK_NAME=boromir
+MAK_NAME=z15_io
 
-MAK_SWITCH= $(SW_PREFIX)MAC_MEM_MAPPED \
-			$(SW_PREFIX)MSCAN_IS_BOROMIR\
-			$(SW_PREFIX)MSCAN_VARIANT=BOROMIR
+MAK_SWITCH= $(SW_PREFIX)MAC_IO_MAPPED \
+			$(SW_PREFIX)MSCAN_IS_Z15 \
+			$(SW_PREFIX)MSCAN_VARIANT=Z15
 
 MAK_LIBS=$(LIB_PREFIX)$(MEN_LIB_DIR)/desc$(LIB_SUFFIX)	\
          $(LIB_PREFIX)$(MEN_LIB_DIR)/oss$(LIB_SUFFIX)	\
@@ -50,4 +51,3 @@ MAK_INP1=mscan_drv$(INP_SUFFIX)
 
 
 MAK_INP=$(MAK_INP1) 
-

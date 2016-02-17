@@ -90,7 +90,7 @@
  * Revision 1.4  2003/03/18 12:42:20  kp
  * 1) WaitRxFifoEntry/MscanWriteMsg: fixed problem when timeout and
  * rx msg/fifo available conditions arrived at the same time.
- * 2) Allow to read error counters in online mode if MSCAN_IS_BOROMIR
+ * 2) Allow to read error counters in online mode if MSCAN_IS_Z15
  * 3) added forgotten baudrate 100kBit/s
  *
  * Revision 1.3  2003/02/07 13:16:33  kp
@@ -1605,9 +1605,9 @@ static int32 MscanErrorCounters( MSCAN_HANDLE *h, MSCAN_ERRORCOUNTERS_PB *pb )
 {
 	/* 
 	 * standard MSCAN implementation do not allow to read error counters
-	 * while online, Boromir does...
+	 * while online, Z015 does...
 	 */
-#ifndef MSCAN_IS_BOROMIR
+#ifndef MSCAN_IS_Z15
 	if( h->canEnabled )
 		return MSCAN_ERR_ONLINE;
 #endif

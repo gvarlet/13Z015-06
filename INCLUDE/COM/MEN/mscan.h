@@ -8,7 +8,7 @@
  * 
  *  Description: register layout for MSCAN (Motorola Scalable CAN/MEN Boromir)
  *                      
- *     Switches: MSCAN_IS_BOROMIR  set if using MEN's FPGA implementation
+ *     Switches: MSCAN_IS_Z15  	   set if using MEN's FPGA implementation
  *				 MSCAN_IS_ODIN	   set if using MGT5100 implementation	
  *
  *-------------------------------[ History ]---------------------------------
@@ -116,7 +116,7 @@
 #define MSCAN_TXTIML	0x7d	/* Tx timestamp low */
 #endif /* MSCAN_IS_ODIN */
 
-#ifdef MSCAN_IS_BOROMIR
+#ifdef MSCAN_IS_Z15
 /*--- registers offset for MEN FPGA implementation "boromir" ---*/
 
 /* all registers are 8 bit wide */

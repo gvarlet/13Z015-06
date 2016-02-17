@@ -8,7 +8,7 @@
  * 
  *  	 \brief  Internal header file for MSCAN driver
  *                      
- *     Switches: MSCAN_IS_BOROMIR 	 - for MEN boromir implementation
+ *     Switches: MSCAN_IS_Z15 	 	 - for MEN own MSCAN implementation
  *				 MSCAN_IS_ODIN		 - for MSCAN MGT5100 implementation
  *               MSCAN_BRP_ALLOW_1   - allow BRP of 1 (not allowed with some 
  *                                     cores
@@ -39,12 +39,12 @@
 	extern "C" {
 #endif
 
-#if !defined(MSCAN_IS_BOROMIR) && !defined(MSCAN_IS_ODIN)
-# error "must define either MSCAN_IS_BOROMIR or MSCAN_IS_ODIN"
+#if !defined(MSCAN_IS_Z15) && !defined(MSCAN_IS_ODIN)
+# error "must define either MSCAN_IS_Z15 or MSCAN_IS_ODIN"
 #endif
 
-#if defined(MSCAN_IS_BOROMIR) && defined(MSCAN_IS_ODIN)
-# error "don't define MSCAN_IS_BOROMIR and MSCAN_IS_ODIN together"
+#if defined(MSCAN_IS_Z15) && defined(MSCAN_IS_ODIN)
+# error "don't define MSCAN_IS_Z15 and MSCAN_IS_ODIN together"
 #endif
 
 
@@ -83,7 +83,7 @@
 #define	MSCAN_ERROR_OBJ		0			/**< msg obj number of error obj  */
 
 /* address space size occupied by MSCAN registers */
-#ifdef MSCAN_IS_BOROMIR
+#ifdef MSCAN_IS_Z15
 # define ADDRSPACE_SIZE	0x100			/* size of address space */
 #endif
 
