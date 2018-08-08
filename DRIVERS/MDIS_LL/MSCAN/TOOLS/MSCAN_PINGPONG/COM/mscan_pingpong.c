@@ -71,10 +71,12 @@ static const char RCSid[]="$Id: mscan_pingpong.c,v 1.4 2010/01/26 14:44:37 MRoth
 static void usage(void);
 
 static int LoopbBasic    ( MDIS_PATH path1, MDIS_PATH path2, int32 timeout, int32 nframes );
+#if 0
 static int LoopbTxPrio   ( MDIS_PATH path1, MDIS_PATH path2, int32 timeout, int32 nframes );
 static int LoopbRxFilter ( MDIS_PATH path1, MDIS_PATH path2, int32 timeout, int32 nframes );
 static int LoopbSignals  ( MDIS_PATH path1, MDIS_PATH path2, int32 timeout, int32 nframes );
 static int LoopbRxOverrun( MDIS_PATH path1, MDIS_PATH path2, int32 timeout, int32 nframes );
+#endif
 
 static void DumpFrame( char *msg, const MSCAN_FRAME *frm );
 static int  CmpFrames( const MSCAN_FRAME *frm1, const MSCAN_FRAME *frm2 );
@@ -510,6 +512,7 @@ static int LoopbBasic( MDIS_PATH pathTx, MDIS_PATH pathRx, int32 timeout, int32 
  *
  * \return 0=ok, -1=error
  */
+#if 0
 static int LoopbTxPrio( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32 nframes )
 {
 	int i, rv = -1;
@@ -558,7 +561,9 @@ static int LoopbTxPrio( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32 nf
 	return rv;
 
 }
+#endif
 
+#if 0
 static int RxFilterChkObj(
 	MDIS_PATH path,
 	int obj,
@@ -587,6 +592,7 @@ static int RxFilterChkObj(
  ABORT:
 	return -1;
 }
+#endif
 
 /**********************************************************************/
 /** Test c: Rx filter
@@ -615,6 +621,7 @@ static int RxFilterChkObj(
  *
  * \return 0=ok, -1=error
  */
+#if 0
 static int LoopbRxFilter( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32 nframes )
 {
 	static const MSCAN_FILTER hwflt[] = {
@@ -766,6 +773,7 @@ static int LoopbRxFilter( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32 
 	return rv;
 
 }
+#endif
 
 
 /**********************************************************************/
@@ -781,6 +789,7 @@ static int LoopbRxFilter( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32 
  *
  * \return 0=ok, -1=error
  */
+#if 0
 static int LoopbSignals( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32 nframes )
 {
 	int rv = -1, i;
@@ -851,6 +860,7 @@ static int LoopbSignals( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32 n
 	UOS_SigInstall( UOS_SIG_USR2 );
 	return rv;
 }
+#endif
 
 /**********************************************************************/
 /** Test d: Rx overruns
@@ -863,6 +873,7 @@ static int LoopbSignals( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32 n
  *
  * \return 0=ok, -1=error
  */
+#if 0
 static int LoopbRxOverrun( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32 nframes )
 {
 	int rv = -1, i;
@@ -943,6 +954,7 @@ static int LoopbRxOverrun( MDIS_PATH path, MDIS_PATH path2, int32 timeout, int32
 
 	return rv;
 }
+#endif
 
 
 static int CmpFrames( const MSCAN_FRAME *frm1, const MSCAN_FRAME *frm2 )

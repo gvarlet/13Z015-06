@@ -132,6 +132,7 @@ typedef struct {
 /*--------------------------------------+
 |   GLOBALS                             |
 +--------------------------------------*/
+#if 0
 /* filters to let everything pass through */
 static const MSCAN_FILTER G_stdOpenFilter = { 
 	0,
@@ -139,6 +140,7 @@ static const MSCAN_FILTER G_stdOpenFilter = {
 	0,
 	0 
 };
+#endif
 static const MSCAN_FILTER G_extOpenFilter = { 
 	0,
 	0xff3fffff,					/* filter out frames sent by MGT5100EVB */
