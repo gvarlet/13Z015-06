@@ -22,8 +22,6 @@
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany 
  ****************************************************************************/
- 
-static const char _RCSid[] = "$Id: mscan_strings.c,v 1.2 2003/04/02 08:37:13 kp Exp $";
 
 #include <stdio.h>
 #include <MEN/men_typs.h>

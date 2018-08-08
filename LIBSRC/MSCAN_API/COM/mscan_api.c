@@ -54,8 +54,6 @@
  *---------------------------------------------------------------------------
  * (c) Copyright 2002 by MEN mikro elektronik GmbH, Nuernberg, Germany 
  ****************************************************************************/
- 
-static const char _RCSid[] = "$Id: mscan_api.c,v 1.8 2010/02/25 18:05:05 amorbach Exp $";
 
 /*! \mainpage
 
@@ -181,7 +179,7 @@ static const char _RCSid[] = "$Id: mscan_api.c,v 1.8 2010/02/25 18:05:05 amorbac
   \subsubsection RecvRtr Receiving RTR Frames
 
   When an RTR frame is received (and it matches the global and local
-  filter), the frame is written into the corresponding object’s receive
+  filter), the frame is written into the corresponding objectï¿½s receive
   FIFO. Application can detect the receiption of an RTR frame by looking
   at the \em flags field of the #MSCAN_FRAME structure.
 
@@ -189,7 +187,7 @@ static const char _RCSid[] = "$Id: mscan_api.c,v 1.8 2010/02/25 18:05:05 amorbac
 
   The application can read received frames of a single message object
   by calling #mscan_read_msg or #mscan_read_nmsg.  These functions
-  read frame(s) from the object’s FIFO and returns the received
+  read frame(s) from the objectï¿½s FIFO and returns the received
   data.
 
   #mscan_read_msg can be blocking or non-blocking if no frame is
@@ -207,7 +205,7 @@ static const char _RCSid[] = "$Id: mscan_api.c,v 1.8 2010/02/25 18:05:05 amorbac
   \subsubsection RxUseSigs Using Signals for Receive
 
   The application can use #mscan_set_rcvsig to install a signal that
-  is sent whenever a new frame is put into the object’s receive
+  is sent whenever a new frame is put into the objectï¿½s receive
   FIFO. A signal for a specific object can be installed by a single
   process only. Each frame causes one signal to be sent to the
   application. Sending of signals can be cleared using
@@ -368,7 +366,7 @@ static const char _RCSid[] = "$Id: mscan_api.c,v 1.8 2010/02/25 18:05:05 amorbac
   - \c MSCAN_BUSOFF_CLR: Controller left busoff state
   - \c MSCAN_WARN_SET: Controller has entered error passive state
   - \c MSCAN_WARN_CLR: Controller has left error passive state
-  - \c MSCAN_QOVERRUN: Object’s receiver FIFO overflowed 
+  - \c MSCAN_QOVERRUN: Objectï¿½s receiver FIFO overflowed 
   - \c MSCAN_DATA_OVERRUN: Data overrun interrupt occurred 
        (hardware receive FIFO full)
 
