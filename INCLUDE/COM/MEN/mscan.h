@@ -11,26 +11,23 @@
  *     Switches: MSCAN_IS_Z15  	   set if using MEN's FPGA implementation
  *				 MSCAN_IS_ODIN	   set if using MGT5100 implementation	
  *
- *-------------------------------[ History ]---------------------------------
- *
- * $Log: mscan.h,v $
- * Revision 2.4  2010/02/25 18:04:50  amorbach
- * R: driver ported to MDIS5, new MDIS_API and men_typs
- * M: for backward compatibility to MDIS4 optionally define new types
- *
- * Revision 2.3  2004/02/11 17:12:00  UFranke
- * added
- *  - RIER bit definitions
- *
- * Revision 2.2  2003/01/29 14:03:22  kp
- * added MSCAN_RFLG_CSCIF
- *
- * Revision 2.1  2003/01/07 15:33:16  kp
- * Initial Revision
- *
  *---------------------------------------------------------------------------
  * (c) Copyright 2002 by MEN mikro elektronik GmbH, Nuernberg, Germany 
  ****************************************************************************/
+/*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 #ifndef _MSCAN_H 
 #define _MSCAN_H 
