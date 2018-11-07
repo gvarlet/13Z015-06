@@ -15,33 +15,7 @@
  *     Switches: -
  *     Required: libraries: mdis_api, usr_oss, usr_utl, mscan_api
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: mscan_client_srv.c,v $
- * Revision 1.4  2013/11/27 15:35:16  MRoth
- * R: 1) recurring test errors, test frame objects were not reset correctly
- *    2) Signal handler not used
- *    3) cosmetics
- * M: 1) fixed loop in LoopbBasic function
- *       to reset the objects on every test cycle
- *    2) removed all Signal handler components
- *    3) reworked the usage and user outputs
- *
- * Revision 1.3  2013/09/19 10:54:53  MRoth
- * R: 1) error counter not working
- *    2) option missing to delay the mscan write/read commands
- * M: 1) implemented new error handling
- *    2) added timeout parameter
- *
- * Revision 1.2  2010/05/19 14:57:32  MRoth
- * R: 1) no inversion of frames (server)
- *    2) no error message if physical interface (e.g. SA8) is missing (client)
- * M: 1) implemented InvertFrame() function
- *    2) implemented checking of FPGA global error fifo
- *
- * Revision 1.1  2010/01/26 18:19:40  MRoth
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2010 by MEN mikro elektronik GmbH, Nuernberg, Germany
  ****************************************************************************/

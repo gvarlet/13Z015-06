@@ -13,24 +13,7 @@
  *               MSCAN_BRP_ALLOW_1   - allow BRP of 1 (not allowed with some 
  *                                     cores
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: mscan_int.h,v $
- * Revision 1.4  2011/09/16 15:01:55  gvarlet
- * R : CAN Odin interface for MPC5200 was not outputing frames on the physical
- *     interface.
- * M : Enable the PSC2_CAN bit on GPIOPCR register of MPC5200.
- *
- * Revision 1.3  2009/11/09 17:16:01  KSchneider
- * R: MSCAN driver used a baud rate prescaler of 1 for some canclock/baud rate constellations. This is not supported by some cores.
- * M: Use a minimum BRP of 2 per default (configurable)
- *
- * Revision 1.2  2003/02/03 10:42:50  kp
- * First alpha release to SH Winding
- *
- * Revision 1.1  2003/01/29 14:03:05  kp
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany 
  ****************************************************************************/

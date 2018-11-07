@@ -10,15 +10,7 @@
  *
  *     Switches: -
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: mscan_strings.c,v $
- * Revision 1.2  2003/04/02 08:37:13  kp
- * added __MAPILIB to all lib functions
- *
- * Revision 1.1  2003/01/29 14:03:15  kp
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany 
  ****************************************************************************/

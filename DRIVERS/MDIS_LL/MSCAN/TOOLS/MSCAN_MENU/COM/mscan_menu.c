@@ -11,26 +11,7 @@
  *     Switches: -
  *     Required: libraries: mdis_api, usr_oss, usr_utl, mscan_api
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: mscan_menu.c,v $
- * Revision 1.5  2010/02/25 18:04:38  amorbach
- * R: driver ported to MDIS5, new MDIS_API and men_typs
- * M1: Change type of G_path to MDIS_PATH
- * M2: Compiler warnings removed
- *
- * Revision 1.4  2006/07/21 09:18:18  ufranke
- * cosmetics
- *
- * Revision 1.3  2004/06/14 11:58:13  kp
- * cosmetics
- *
- * Revision 1.2  2003/03/18 12:40:56  kpftp
- * fixed read of error counters
- *
- * Revision 1.1  2003/01/29 14:03:08  kp
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany 
  ****************************************************************************/

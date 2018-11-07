@@ -12,31 +12,7 @@
  *     Switches: -
  *     Required: libraries: mdis_api, usr_oss, usr_utl, mscan_api
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: mscan_pingpong.c,v $
- * Revision 1.4  2010/01/26 14:44:37  MRoth
- * R: 1. no user regulation of timeout period and number of frames
- *    2. Porting to MDIS5
- *    3. compiler warning
- * M: 1.a) added new parameters -o (timeout) and -f (number of frames)
- *      b) amplified parameters of test functions
- *      c) changed mscan_api calls within test functions
- *    2.a) added support for 64bit (MDIS_PATH)
- *      b) changed prototype of SigHandler
- *    3. fixed loop in RxFilterChkObj() with u_int32 cast
- *
- * Revision 1.3  2009/10/14 14:37:45  KSchneider
- * R: previous revision contained minor bug
- * M: fix
- *
- * Revision 1.2  2009/10/14 11:29:29  KSchneider
- * R: program does not explicitly print which CAN module is sending and which one is receiving in the currently performed test
- * M: Print corresponding info in the test's introductory line
- *
- * Revision 1.1  2008/10/16 11:41:35  ufranke
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2008 by MEN mikro elektronik GmbH, Nuernberg, Germany
  ****************************************************************************/

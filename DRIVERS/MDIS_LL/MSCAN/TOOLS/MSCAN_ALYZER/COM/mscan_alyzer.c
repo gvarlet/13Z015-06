@@ -29,44 +29,7 @@
  *     Switches: -
  *     Required: libraries: mdis_api, usr_oss, usr_utl, mscan_api
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: mscan_alyzer.c,v $
- * Revision 1.9  2010/02/25 18:04:27  amorbach
- * R: driver ported to MDIS5, new MDIS_API and men_typs
- * M1: Change type of path to MDIS_PATH
- * M2: Compiler warnings removed
- *
- * Revision 1.8  2007/04/10 17:21:43  SYao
- * Correct output message's format
- *
- * Revision 1.7  2006/02/22 12:04:32  ub
- * added options to set timing parameters
- *
- * Revision 1.6  2005/03/24 10:18:30  kp
- * hide error if mscan_error_counters() fails (not possible with MPC5200 CAN)
- *
- * Revision 1.5  2004/06/14 11:58:21  kp
- * cosmetics
- *
- * Revision 1.4  2004/03/19 11:02:04  ub
- * Fixed: Try to close non-open path
- *
- * Revision 1.3  2003/08/27 08:13:28  kp
- * changed for test with Schlafhorst Winding CAN repeater and PP01:
- * 1) don't use COB IDs 0x000..0x2ff
- * 2) filter out COB IDs sent by CAN repeater
- * 3) now Tx/Rx COB IDs are always different
- *
- * Revision 1.2  2003/03/18 12:40:13  kpftp
- * Slightly modified:
- * 1) Ignore frames sent by MGT5100EVB (0x40000x)
- * 2) Sent IDs start with an offset of 10 now
- * 3) Check & display node state
- *
- * Revision 1.1  2003/02/07 13:16:37  kp
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany 
  ****************************************************************************/

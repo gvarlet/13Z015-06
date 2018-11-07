@@ -14,37 +14,7 @@
  *     Switches: -
  *     Required: libraries: mdis_api, usr_oss, usr_utl, mscan_api
  */
-/*-------------------------------[ History ]---------------------------------
- *
- * $Log: mscan_loopb.c,v $
- * Revision 1.9  2010/02/25 18:04:33  amorbach
- * R: driver ported to MDIS5, new MDIS_API and men_typs
- * M: Change type of path to MDIS_PATH
- *
- * Revision 1.8  2009/05/12 11:50:09  ts
- * R: driver package build failed under windows
- * M: added specifier __MAPILIB to function SigHandler
- *
- * Revision 1.7  2009/05/08 18:12:25  ts
- * R: new CAN IPcore caused error during local loopback test at
- *    high baudrates
- * M: inserted small delay in transmit routine of local loopback test
- *
- * Revision 1.5  2004/06/14 11:58:17  kp
- * cosmetics
- *
- * Revision 1.4  2004/03/19 11:05:45  ub
- * Fixed: Try to terminate non-open path
- *
- * Revision 1.3  2003/07/11 09:25:42  kp
- * added test for mscan_dump_internals
- *
- * Revision 1.2  2003/02/03 10:42:52  kp
- * First alpha release to SH Winding
- *
- * Revision 1.1  2003/01/29 14:03:11  kp
- * Initial Revision
- *
+/*
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany 
  ****************************************************************************/
