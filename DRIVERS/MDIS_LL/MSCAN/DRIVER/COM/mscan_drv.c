@@ -712,12 +712,15 @@ static int32 MSCAN_Irq( LL_HANDLE *llHdl )
 	MSG_OBJ *obj;
 	int txb, objNr, nothingToSched=FALSE;
 	u_int8 txbMask;
+	OSS_IRQ_STATE oldState;
 
 	tflg = MSREAD( ma, MSCAN_TFLG );
 
 	IDBGWRT_2((DBH,">>> MSCAN_Irq rflg=0x%x tflg=0x%x\n", 
 			   MSREAD( ma, MSCAN_RFLG ), tflg));
 
+	/* Mask the IRQ to be SMP safe */
+	oldState = OSS_IrqMaskR( h->osHdl, h->irqHdl );
 
 	/*-----------------------------------------+
 	|  Handle Rx and scheduling of Tx buffers  |
@@ -797,6 +800,9 @@ static int32 MSCAN_Irq( LL_HANDLE *llHdl )
 	}
 
 	IDBGWRT_2((DBH,"<<< MSCAN_Irq\n"));
+	
+	/* Restore IRQ before returning from the ISR */
+	OSS_IrqRestore( h->osHdl, h->irqHdl, oldState );
 
 	if( haveInt ){
 		h->irqCount += haveInt;
